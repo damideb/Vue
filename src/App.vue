@@ -5,16 +5,11 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
  <header class="top-bar spread">
     <nav class="top-bar-nav">
+      <!-- you can also use the active-class prop that router-link provides -->
       <router-link v-for="(item, i) in links" :to="item.link" :key="i" @click="index(i)" class="top-bar-link" :class="{activee: activeIndex==i}">
         <i v-if="i===0" class="icofont-spoon-and-fork"></i>
         <span>{{ item.text }}</span>
       </router-link>
-      <!-- <router-link to="/products" class="top-bar-link">
-        <span>Products</span>
-      </router-link>
-      <router-link to="/past-orders" class="top-bar-link">
-        <span>Past Orders</span>
-      </router-link> -->
     </nav>
     <div @click="toggleSidebar" class="top-bar-cart-link">
       <i class="icofont-cart-alt icofont-1x"></i>
@@ -42,6 +37,7 @@ import SideBar from '@/components/SideBar.vue'
 import food from './food.json'
 
 export default{
+
   components:{
     SideBar
   },

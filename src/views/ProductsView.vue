@@ -17,6 +17,13 @@
 import ProductsCard from '@/components/ProductsCard.vue'
 
   export default{
+    mounted() {
+
+      // watch(()=> $this.route.params, (newParams, oldParams)=>{
+// then return whatever functionality you want
+  //    }) 
+    console.log(this.$route.params.index)
+  },
 
     props:['inventory', 'addToCart'],
     components: {
