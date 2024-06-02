@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import SideBar from '@/components/SideBar.vue'
 </script>
 
 <template>
@@ -33,14 +34,12 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <script lang="ts"  >
 
-import SideBar from '@/components/SideBar.vue'
+
 import food from './food.json'
 
 export default{
 
-  components:{
-    SideBar
-  },
+ 
   data(){
     return{
       activeIndex:0,

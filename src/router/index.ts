@@ -12,6 +12,10 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path:'/home',
+      redirect:'/'
+    },
+    {
       path: '/products/:index',
       name: 'products',
       component: ProductsView,
